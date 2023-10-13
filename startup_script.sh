@@ -1,6 +1,6 @@
 #!/bin/bash
 instance_id=$(curl -fs http://169.254.169.254/latest/meta-data/instance-id | sed -e 's/i-//g')
-new_hostname=$instance_id.${Environment}.sfc.net
+new_hostname=$instance_id.${Environment}.${Application}.net
 echo $new_hostname > /etc/hostname
 echo "127.0.0.1 $(new_hostname)" > /etc/hosts
 echo 'export AWS_REGION=${region}' >> /tmp/.env_${Application}
