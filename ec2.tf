@@ -1,5 +1,5 @@
 module "autoscale_group" {
-  source = "git::https://github.com/cloudposse/terraform-aws-ec2-autoscale-group.git?ref=0.30.0"
+  source = "git::https://github.com/cloudposse/terraform-aws-ec2-autoscale-group.git?ref=0.36.0"
 
   name = "${var.env}-${var.application_name}-Web"
 
