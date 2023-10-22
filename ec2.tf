@@ -17,7 +17,6 @@ module "autoscale_group" {
   target_group_arns           = [aws_lb_target_group.web.arn]
   user_data_base64            = data.cloudinit_config.config.rendered
 
-  tags = local.tags
 
   # Auto-scaling policies and CloudWatch metric alarms
   autoscaling_policies_enabled           = "true"
