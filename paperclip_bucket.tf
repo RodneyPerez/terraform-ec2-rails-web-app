@@ -15,10 +15,6 @@ resource "aws_ssm_parameter" "paperclip_bucket" {
   tags = local.tags
 }
 
-resource "aws_s3_bucket_acl" "main_app" {
-  bucket = aws_s3_bucket.main_app.id
-  acl    = "private"
-}
 
 resource "aws_s3_bucket_public_access_block" "main_app" {
   bucket = aws_s3_bucket.main_app.id
