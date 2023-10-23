@@ -6,7 +6,7 @@ locals {
     "terraform" : true
   }
   application_repo       = "${lower(local.underscore_app_name)}_web"
-  application_org        = "sticky-fingers-cooking"
+  application_org        = var.org
   application_title_name = title(replace(var.application_name, "-", " "))
   underscore_app_name    = replace(var.application_name, "-", "_")
   app_name_lowercase     = lower(var.application_name)

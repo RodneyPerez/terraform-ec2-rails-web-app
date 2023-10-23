@@ -40,3 +40,6 @@ variable "public_paperclip_bucket" {
   type    = bool
   default = true
 }
+variable "org" {
+  type = string
+}
