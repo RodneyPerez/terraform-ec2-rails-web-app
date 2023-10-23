@@ -43,3 +43,6 @@ variable "public_paperclip_bucket" {
 variable "org" {
   type = string
 }
+variable "repo" {
+  type = string
+}
