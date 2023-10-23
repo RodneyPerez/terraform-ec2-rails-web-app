@@ -5,11 +5,6 @@ resource "aws_s3_bucket" "pipeline" {
   tags = local.tags
 }
 
-resource "aws_s3_bucket_acl" "pipeline" {
-  bucket = aws_s3_bucket.pipeline.id
-  acl    = "private"
-}
-
 resource "aws_s3_bucket_public_access_block" "pipeline" {
   bucket = aws_s3_bucket.pipeline.id
 

@@ -13,11 +13,6 @@ resource "aws_ssm_parameter" "rds_backups_bucket" {
   tags = local.tags
 }
 
-resource "aws_s3_bucket_acl" "rds_backups" {
-  bucket = aws_s3_bucket.rds_backups.id
-  acl    = "private"
-}
-
 resource "aws_s3_bucket_public_access_block" "rds_backups" {
   bucket = aws_s3_bucket.rds_backups.id
 
