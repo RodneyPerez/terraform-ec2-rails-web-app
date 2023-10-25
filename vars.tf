@@ -46,3 +46,9 @@ variable "org" {
 variable "repo" {
   type = string
 }
+variable "healthcheck_path" {
+  type = string
+}
+variable "healthcheck_status_code" {
+  type = string
+}

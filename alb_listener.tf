@@ -36,8 +36,8 @@ resource "aws_lb_target_group" "web" {
   health_check {
     healthy_threshold   = 5
     unhealthy_threshold = 10
-    path                = "/status"
-    matcher             = "200"
+    path                = var.healthcheck_path
+    matcher             = var.healthcheck_status_code
     interval            = 6
     timeout             = 5
   }
